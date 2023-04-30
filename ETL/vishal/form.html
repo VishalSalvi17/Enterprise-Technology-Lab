@@ -1,0 +1,200 @@
+ <!DOCTYPE html>
+<html>
+<body bgcolor="#E6E6FA">
+
+<h1>Welcome</h1>
+<h2>Feedback Form</h2>
+<script>
+function validation()								 
+{ 
+	var fname = document.forms["RegForm"]["First name"];			 
+	var Lname = document.forms["RegForm"]["Last name"]; 
+	var email = document.forms["RegForm"]["Email id"]; 
+	var gender = document.forms["RegForm"]["Gender"]; 
+	var state = document.forms["RegForm"]["State"]; 
+	var comments = document.forms["RegForm"]["Comments"]; 
+
+	if (fname.value == "")								 
+	{ 
+		window.alert("Please enter your First name."); 
+		fname.focus(); 
+		return false; 
+	} 
+	
+	if (Lname.value == "")								 
+	{ 
+		window.alert("Please enter your Last name."); 
+		Lname.focus(); 
+		return false; 
+	}  
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (gender.value == "")						 
+	{ 
+		window.alert("Please enter your gender."); 
+		gender.focus(); 
+		return false; 
+	} 
+
+	if (comments.value == "")					 
+	{ 
+		window.alert("Please enter your password"); 
+		comments.focus(); 
+		return false; 
+	} 
+
+	if (state.selectedIndex < 1)				 
+	{ 
+		alert("Please enter your state."); 
+		state.focus(); 
+		return false; 
+	} 
+
+	return true; 
+}</script> 
+
+
+
+
+<style>
+
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2  {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+ {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=radio], select, textarea {
+  
+  padding: 12px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=textarea], select, textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+input[type=submit] {
+  background-color: orange;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+ 
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname"><br>
+  <input type="hidden" id="custId" name="custId" value="3487">
+ 
+   Email id: <br>
+   <input type="email" name="email"><br><br>
+
+    Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br><br>
+
+   State   :<br>
+    <select >
+        <option>Maharashta</option>
+        <option>Gujrat</option>
+        <option>Madhyapradesh</option>
+        <option>Delhi</option>
+    </select>
+    <br><br>
+
+	
+          Comments:<br>
+          <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+   <br><br> <form action="myform.cgi">
+   <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+   <label for="fileupload"> Select a file to upload</label> 
+  <br>
+
+ </form>
+
+
+<br> <br><input type="checkbox" name="true" value="true"> All given information is correct.<br>
+    <center><input type="submit" value="Submit"></center>
+</form> 
+
+</body>
+</html>
